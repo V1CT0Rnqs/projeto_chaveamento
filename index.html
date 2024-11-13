@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato de Basquete</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <h1>Campeonato de Basquete</h1>
+                <img src="./images/basquetebol.png" alt="">
+            </div>
+        </header>
+
+        <!-- Formulário para Adicionar Nomes dos Times -->
+        <div id="team-form">
+            <h2>Insira os Nomes dos Times</h2>
+            <h3>Oitavas de Final</h3>
+            <div id="team-inputs">
+                <!-- Campos de entrada para cada time -->
+                <input type="text" placeholder="Time 1" id="team1" required>
+                <input type="text" placeholder="Time 2" id="team2" required>
+                <input type="text" placeholder="Time 3" id="team3" required>
+                <input type="text" placeholder="Time 4" id="team4" required>
+                <input type="text" placeholder="Time 5" id="team5" required>
+                <input type="text" placeholder="Time 6" id="team6" required>
+                <input type="text" placeholder="Time 7" id="team7" required>
+                <input type="text" placeholder="Time 8" id="team8" required>
+            </div>
+            <button id="start-tournament">Iniciar Torneio</button>
+        </div>
+        
+        <!-- Quartas de Final -->
+        <div id="quarter-finals" class="round hidden">
+            <h2>Quartas de Final</h2>
+            <div class="match" id="match1">
+                <span id="qf1-team1"></span> vs <span id="qf1-team2"></span>
+                <input type="text" placeholder="Vencedor" id="qf1-winner">
+            </div>
+            <div class="match" id="match2">
+                <span id="qf2-team1"></span> vs <span id="qf2-team2"></span>
+                <input type="text" placeholder="Vencedor" id="qf2-winner">
+            </div>
+            <div class="match" id="match3">
+                <span id="qf3-team1"></span> vs <span id="qf3-team2"></span>
+                <input type="text" placeholder="Vencedor" id="qf3-winner">
+            </div>
+            <div class="match" id="match4">
+                <span id="qf4-team1"></span> vs <span id="qf4-team2"></span>
+                <input type="text" placeholder="Vencedor" id="qf4-winner">
+            </div>
+        </div>
+        
+        <!-- Semifinais -->
+        <div id="semi-finals" class="round hidden">
+            <h2>Semifinais</h2>
+            <div class="match" id="semi1">
+                <span id="sf1-team1"></span> vs <span id="sf1-team2"></span>
+                <input type="text" placeholder="Vencedor" id="sf1-winner">
+            </div>
+            <div class="match" id="semi2">
+                <span id="sf2-team1"></span> vs <span id="sf2-team2"></span>
+                <input type="text" placeholder="Vencedor" id="sf2-winner">
+            </div>
+        </div>
+
+        <!-- Final -->
+        <div id="final" class="round hidden">
+            <h2>Final</h2>
+            <div class="match" id="finalMatch">
+                <span id="finalist1"></span> vs <span id="finalist2"></span>
+                <input type="text" placeholder="Vencedor" id="final-winner">
+            </div>
+        </div>
+
+        <!-- Botão de Avançar -->
+        <button id="advance-button" class="hidden">Avançar para a Próxima Fase</button>
+
+        <!-- Resultado Final -->
+        <div id="result" class="hidden">
+            <h2>Vencedor: <span id="champion">-</span></h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
